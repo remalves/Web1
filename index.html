@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 10;
+        //window.localStorage.setItem("numero", num);
+
+        /*Os dados armazenados no Armazenamento Local persistem 
+        indefinidamente até serem explicitamente excluídos pelo 
+        usuário ou por código JavaScript. Eles 
+        permanecem mesmo após o navegador ser 
+        fechado e reaberto.*/
+
+        localStorage.setItem("numero",num);
+        localStorage.setItem("nome", "Bruno");
+        localStorage.setItem("curso", "BES");
+
+        //leitura
+        alert(localStorage.getItem("numero"));
+        alert(localStorage.getItem("nome"));
+        alert(localStorage.getItem("curso"));
+
+        alert(localStorage.key(0)) //chave
+        alert(localStorage.getItem(localStorage.key(0))); //valor
+
+        //tamanho do local storage
+        alert(localStorage.length);
+
+        //limpar
+        localStorage.clear();
+
+        //sessionStorage 
+
+        /*Os dados armazenados no Armazenamento de Sessão são 
+        temporários e são apagados quando a aba ou janela do navegador
+        em que foram criados é fechada. Eles persistem apenas durante 
+        uma única "sessão" daquela aba/janela específica.*/
+        
+        sessionStorage.setItem("numero",num);
+        sessionStorage.setItem("nome", "Bruno");
+        sessionStorage.setItem("curso", "BES");
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // somaNumerosPares(qtde) - Recebe um número inteiro positivo e retorna a soma dos N primeiros números pares. O primeiro número par é o Zero.
+
+        function somaNumerosPares(qtde){
+            let somaPares = 0;
+            let i=0, count = 0;
+            while(count < qtde){
+
+                if(i%2 == 0){
+                    alert(i);
+                    somaPares+=i;
+                    count++;
+                }
+                i++;
+            }
+
+            return somaPares;
+        }
+
+        let num = prompt("Digite um numero inteiro e positivo: ");
+        num = parseInt(num);
+
+        alert(`Soma dos primeiros ${num} números pares = ${somaNumerosPares(num)}`);
+
+
+
+    </script>
+</body>
+</html>

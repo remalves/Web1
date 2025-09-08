@@ -1,0 +1,38 @@
+
+<!-- removeValores(valor, lista) - 
+ Recebe um valor numérico e uma lista. Retorna a lista sem nenhuma ocorrência do "valor" especificado. 
+ A função deve conter map/filter/reduce. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        function removeValores(valor,lista){
+            return lista.filter(item => item !== valor);
+        }
+
+        let numeros = [];
+        let qtd = 5;
+        let valor;
+
+        alert("Digite 5 numeros p/ lista: ");
+        for(let i =0; i< qtd; i++){
+           let num = prompt("Digite 1 numero: ");
+           numeros.push(num);
+
+        }
+
+        alert("Digite um valor a ser removido da lista:  ");
+        valor = prompt("Digite 1 numero: ");
+
+        let res = removeValores(valor, numeros);
+        alert("Lista sem o numero: "+ res);          
+     
+    </script>
+ </body>
+ </html>

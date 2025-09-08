@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  
+
+        function apenasUnicos(numeros) {
+            let unicos = [];
+
+            for (let num of numeros) {
+                // conta quantas vezes o num aparece na lista
+                let count = numeros.filter(x => x === num).length;
+                if (count === 1) {
+                    unicos.push(num);
+                }
+            }
+
+            return unicos;
+        }
+
+        // ler números do usuário
+        let lista = [];
+        let entrada;
+
+        do {
+            entrada = prompt("Digite um número (ou 'f' para finalizar):");
+            if (entrada !== "f") {
+                entrada = parseFloat(entrada);
+                lista.push(entrada); // converte para número antes de adicionar
+            }
+        } while (entrada !== "f");
+
+        // mostrar resultado
+        alert("Números únicos: " + apenasUnicos(lista));
+
+            
+
+    </script>
+</body>
+</html>

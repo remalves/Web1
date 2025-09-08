@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // maior(v1, v2) - Recebe duas listas contendo números. 
+        // Retorna a lista cuja soma dos valores é maior que a outra lista. 
+        // Caso ambas tenham o valor igual, retorna FALSE. Uma lista vazia tem valor igual a ZERO. A função deve conter map/filter/reduce.
+
+        function maior(v1,v2){
+            // Somar valores das listas; lista vazia já vale 0
+            const somaV1 = v1.reduce((acumulador, numeros)=>acumulador+numeros, 0);
+            const somaV2= v2.reduce((acumulador, numeros)=>acumulador+numeros, 0);
+            
+            if(somaV1 === somaV2){
+                return false;
+            }else if(somaV1 > somaV2){
+                return v1;
+            }else{
+                return v2;
+            }
+        }
+
+        let vet1 = [];
+        let vet2 = [];
+        let qtd = 5;
+
+        alert("Digite 5 numeros p/ lista 1: ");
+        for(let i =0; i< qtd; i++){
+           let num = prompt("Digite 1 numero: ");
+           vet1.push(num);
+
+        }
+
+        alert("Digite 5 numeros p/ lista 2: ");
+        for(let i =0; i< qtd; i++){
+            let num = prompt("Digite 1 numero: ");
+            vet2.push(num);
+
+        }
+
+        let res = maior(vet1,vet2);
+        alert("Maior: " + res ); 
+
+
+
+    </script>
+</body>
+</html>

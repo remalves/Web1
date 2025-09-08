@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // diff(v1,v2) - Recebe duas listas e retorna os elementos que aparecem apenas em v1, mas não aparecem em v2
+        function diff(v1,v2){
+            return v1.filter(num => !v2.includes(num));
+        }
+        vet1=[1,2,3,4,5,6,7,8,9,10];
+        vet2=[1,2,3,5,6,8,10];
+        resultado = diff(vet1, vet2);
+        console.log(resultado);
+    </script>
+    
+</body>
+</html>

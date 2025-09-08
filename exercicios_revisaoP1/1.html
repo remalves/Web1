@@ -1,0 +1,64 @@
+<!-- primos(qtde) - Função que recebe um número natural maior ou igual a zero 
+ e retorna uma lista com os N primeiros números primos. O número "1" é o primeiro número primo. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primos</title>
+</head>
+<body>
+    <h1>Lista de Primos:</h1>
+    <div id="output"></div>
+    <script>
+        function primos(qtd)
+
+        {   
+            
+            let primos = [1];
+            let i = 2;
+            
+            
+            if(qtd === 0)
+            {
+                return [];
+            }
+
+
+            while(primos.length<qtd)
+            {   
+                let divs = 0;
+                for(let j=1; j <=i; j++)
+                {
+                    if(i%j===0)
+                    {
+                        divs++;
+                    }
+
+                }
+
+                if(divs ===2)
+                {
+                    primos.push(i);
+             
+                }
+                i++;
+            }
+            return primos;
+        }
+
+
+        let qtdade =  prompt("\nDigite um numero para a quantidade desejada de numeros primos: ");
+        qtdade = parseInt(qtdade);
+        let lista = primos(qtdade);  
+
+        document.getElementById("output").textContent = `Lista dos primos: ${lista}`;
+  
+
+    </script>
+</body>
+</html>
+

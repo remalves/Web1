@@ -1,0 +1,39 @@
+<!-- palindromo(palavras) - Função que recebe uma lista de strings e retorna uma outra lista 
+ com as palavras de entrada que são consideradas palindromas. Por definição, uma palavra com uma letra é palíndroma.
+  Cuidado que maiúscula e minúscula não diferencia se é ou não palíndroma, mas a saída deve condizer com a palavra de entrada. 
+  A função deve utilizar map/filter/reduce. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function palindromo(palavras){
+          return palavras.filter(palavra=>{
+          let normalizada = palavra.toLowerCase();
+          let invertida = normalizada.split("").reverse().join("");
+          return normalizada === invertida; 
+        });
+      }
+
+        listaPalavras = [];
+        let palavra;
+        do{
+            palavra = prompt("Digite quantas palavras quiser (para encerrar digite 0): ");
+
+            if(palavra!=="0"){
+              listaPalavras.push(palavra);
+            }
+          
+        } while(palavra !== "0" );
+
+        console.log(palindromo(listaPalavras));
+
+    </script>
+  </body>
+  </html>

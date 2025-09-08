@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function perigoAcidente(altura_pes_aviao1, altura_met_aviao2)
+        {
+            // 1 metro = 3,28084 pés
+            let pesAviao2 = altura_met_aviao2 * 3.28084; 
+            let distance = altura_pes_aviao1 - pesAviao2;
+            if(Math.abs(distance) < 1000){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+
+        let alturaAviao1 = prompt("Altura do avião em pés: ");
+        alturaAviao1 = parseFloat(alturaAviao1);
+        let alturaAviao2 = prompt("Altura do avião em metros: ");
+        alturaAviao2 = parseFloat(alturaAviao2);
+        res = perigoAcidente(alturaAviao1, alturaAviao2);
+
+        if(res){
+            console.log("Distância menor que 1000 pés");
+        }else{
+            console.log("Distância maior que 1000 pés");
+        }
+    </script>
+</body>
+</html>

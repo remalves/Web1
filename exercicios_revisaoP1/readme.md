@@ -1,10 +1,19 @@
 primos(qtde) - Função que recebe um número natural maior ou igual a zero e retorna uma lista com os N primeiros números primos. O número "1" é o primeiro número primo.
+
 palindromo(palavras) - Função que recebe uma lista de strings e retorna uma outra lista com as palavras de entrada que são consideradas palindromas. Por definição, uma palavra com uma letra é palíndroma. Cuidado que maiúscula e minúscula não diferencia se é ou não palíndroma, mas a saída deve condizer com a palavra de entrada. A função deve utilizar map/filter/reduce.
+
 perigoAcidente(altura_pes_aviao1, altura_met_aviao2) - Em geral, dois aviões devem ter 1000 pés de distância entre suas rotas de vôo. Nesta função, recebe a altura de um avião em pés (avião 1) e em metros (avião 2) e retorna TRUE caso a distância entre eles é menor que 1000 pés, ou FALSE em qualquer outro caso. A função aceita altitudes negativas (não faz sentido, eu sei, mas ei, science).
+
 apenasUnicos(lista) - Recebe uma lista e retorna uma outra lista que contenha apenas os itens únicos da lista de entrada (aqueles que não possuam duplicados).
+
 somaNumerosPares(qtde) - Recebe um número inteiro positivo e retorna a soma dos N primeiros números pares. O primeiro número par é o Zero.
+
 dobro(valores) - Recebe uma lista contendo números e retorna uma lista de mesmo tamanho, mas cujos valores tenham sido multiplicados por 2. A função deve conter map/filter/reduce.
+
 uniao(v1,v2) - Recebe duas listas e retorna a união da lista v1 com a lista v2. Lembre-se que o resultado da união não pode conter qualquer valor duplicado, mesmo que v1 ou v2 contenham valores duplicados.
+
 diff(v1,v2) - Recebe duas listas e retorna os elementos que aparecem apenas em v1, mas não aparecem em v2.
+
 maior(v1, v2) - Recebe duas listas contendo números. Retorna a lista cuja soma dos valores é maior que a outra lista. Caso ambas tenham o valor igual, retorna FALSE. Uma lista vazia tem valor igual a ZERO. A função deve conter map/filter/reduce.
+
 removeValores(valor, lista) - Recebe um valor numérico e uma lista. Retorna a lista sem nenhuma ocorrência do "valor" especificado. A função deve conter map/filter/reduce.

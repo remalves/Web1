@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <li><span>1</span><button>Faz algo</button></li>
+        <li><span>2</span><button>Faz algo1</button></li>
+        <li><span>3</span><button>Faz algo2</button></li>
+        <li><span>4</span><button>Faz algo3</button></li>
+    </ul> -->
+
+    <!-- <form> 
+        <input type="text" required minlength="4">
+        <button>Enviar</button>
+    </form> -->
+
+    <!-- <button>Clique aqui</button> -->
+
+
+
+    <div>
+        <button>Clique Aqui</button>
+    </div>
+
+
+    <script>
+
+
+        let div = document.querySelector("div");
+        let btn = document.querySelector("button");
+
+        div.addEventListener("click", (e) => {
+            console.log("Cliquei no div");
+        })
+
+        //se propaga do filho para o pai 
+        btn.addEventListener("click", (e) => {
+            console.log("Cliquei no botao");
+            e.stopPropagation();
+        })
+
+
+
+
+
+
+
+        // function dizOLa(e)
+        // {
+        //     let botao = e.target;
+        //     let pai = botao.parentElement;
+        //     let irmao = pai.children[0];
+        //     console.log(irmao);
+
+            
+        // }
+
+        // let botoes = document.querySelectorAll("button");
+
+        // for (let botao of botoes)
+        // {
+        //     botao.addEventListener("click", dizOLa);
+        // }
+        
+
+    // function fazprimeiro(e) 
+    // {
+    //     console.log("Fiz primeiro");
+    // }
+    // function fazsegundo(e)
+    // {
+    //     console.log("Fiz segundo");
+    // }
+
+    // let btn = document.querySelector("button");
+    // btn.addEventListener("click", fazprimeiro);
+    // btn.addEventListener("click", fazsegundo);
+       
+    // el.removeEventListener("click", fazprimeiro); //não utilizado com funções anonimas ou arrow functions
+
+    </script>
+
+
+
+
+
+</body>
+</html>

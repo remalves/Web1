@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 3</title>
+</head>
+<body>
+      <!-- <ul>
+        <li><span>1</span><button>Faz algo</button></li>
+        <li><span>2</span><button>Faz algo1</button></li>
+        <li><span>3</span><button>Faz algo2</button></li>
+        <li><span>4</span><button>Faz algo3</button></li>
+    </ul> -->
+
+
+    <form>
+        <input type="text">
+        <button>Enviar</button>
+    </form>
+
+
+    <script>
+        // function dizOla(e)
+        // {
+        //     let elemento = e.target;
+        //     let span = elemento.previousElementSibling;
+        //     let conteudo = span.innerText; //mesmo que seja um nº, o valor é uma string
+        //     //span.innerText = "IFSP é Legal!";
+        //     span.innerHTML = "<b>IFSP é Legal!<b> ";
+        //     //span.innerHTML = ""; //deixar vazio
+        //     //elemento.parentElement.innerHTML = ""; sumir com o elemento
+        //     //console.log(span.innerText);
+
+        // }
+
+        // let botoes = document.querySelectorAll("button");
+        // for(let botao of botoes)
+        // {
+        //     botao.addEventListener("click", dizOla);
+        // }
+
+
+        function fazAlgo(e)
+        {
+            e.preventDefault(); 
+
+            let elemento = document.querySelector("input");
+            console.log(elemento.value);
+            alert(elemento.value);
+            let texto = elemento.value;
+            elemento.value = "IFSP legal d+";
+
+            //desabilitando um elemento
+            elemento.setAttribute("disabled", "");
+            //resultado após desabilitar 
+            let resultado = elemento.getAttribute("disabled");
+            console.log(resultado);
+
+
+        
+
+
+        }
+
+        let form = document.querySelector("form");
+        form.addEventListener("submit", fazAlgo);
+
+
+        
+        
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
